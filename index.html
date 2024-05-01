@@ -5,20 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sviluppo di una pagina web - Blog Epicode</title>
     <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
       header {
         display: flex;
-        justify-content: center;
-        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(46, 42, 42);
       }
+      .logo {
+        width: 200px;
+        padding-left: 50px;
+      }
+      .menu {
+        width: 700px;
+        display: flex;
+        justify-content: space-around;
+        color: beige;
+      }
+
+      nav h1 {
+        margin-bottom: 0;
+      }
+      nav h3 {
+        margin-top: 0;
+      }
+      .tabella {
+        display: flex;
+        flex-direction: column;
+        margin-left: 300px;
+      }
+      table {
+        border: solid 1px;
+      }
+      .tab {
+        border: solid 1px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+      }
+
+      tr {
+        border: solid 1px;
+      }
+      iframe {
+        margin-left: 300px;
+      }
+      .correlati {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      footer {
+        background-color: rgb(46, 42, 42);
+        color: aliceblue;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
     </style>
   </head>
   <body>
     <container>
       <header>
-        <img src="/assets/header-logo.png" alt="logo epicode" width="200px" />
-        <div class="menu">Home</div>
-        <div class="menu">Articoli</div>
-        <div class="menu">Lavora con noi</div>
+        <div class="logo">
+          <img src="/assets/header-logo.png" alt="logo epicode" width="200px" />
+        </div>
+        <div class="menu">
+          <div>Home</div>
+          <div>Articoli</div>
+          <div>Lavora con noi</div>
+        </div>
       </header>
       <nav>
         <h1>Come creare un template per i post di Mario Rossi</h1>
@@ -49,11 +109,11 @@
           </div>
         </section>
         <section class="tabella">
-          <div>
+          <div class="tab">
             <h3>L'applicazione di stili CSS è cresciuta negli anni fino a raggiungere la diffusione pressocchè totale.</h3>
             <table>
               <caption>
-                Diffusione dei CSS
+                <b>Diffusione dei CSS</b>
               </caption>
               <thead>
                 <tr>
@@ -90,22 +150,22 @@
                 </tr>
               </tbody>
             </table>
-            <p>
-              Un test di validazione potrà essere fatto tramite il tool online <a href="https://www.totalvalidator.com/">Tool Validator</a> dedicato allo scopo.
-              Una volta ottimizzato il tutto, avremo raggiunto il nostro obbiettivo ede essere stati dei veri developpers come loro:
-            </p>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/KWVJTRWILjU?si=NlVQ_v55u9A5Lncw"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
           </div>
         </section>
+        <p>
+          Un test di validazione potrà essere fatto tramite il tool online <a href="https://www.totalvalidator.com/">Tool Validator</a> dedicato allo scopo. Una
+          volta ottimizzato il tutto, avremo raggiunto il nostro obbiettivo ede essere stati dei veri developpers come loro:
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/KWVJTRWILjU?si=NlVQ_v55u9A5Lncw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </main>
       <hr />
       <hr />
@@ -120,7 +180,7 @@
         </h4>
       </div>
       <div class="correlati">
-        <h4>Articoli correlati</h4>
+        <h4>Articoli correlati:</h4>
         <div>
           <p>
             Validare il codice HTML <br />
